@@ -6,6 +6,8 @@ import controleur.ControleurJardinator;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.Button;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.shape.Rectangle;
 import modele.Legume;
 
 public class VueJardinator extends Vue {
@@ -35,18 +37,21 @@ public class VueJardinator extends Vue {
 				controleur.notifierChoixSemis(Legume.LEGUME.CAROTTE);
 				
 			}});
+				
+		// POC = Proof Of Concept => que on peut faire apparaitre une image sur le jardin
 		
-		/*
-		Button actionCalculatrice = (Button) lookup("#action-calculatrice");
-		actionCalculatrice.setOnAction(new EventHandler<ActionEvent>() 
-		{
-            @Override public void handle(ActionEvent e) 
-            {
-            	Logger.logMsg(Logger.INFO, "Bouton Calculatrice activé");
-            	controleur.notifierEvenement(ActionNavigation.CALCULATRICE);
-            }
-        });
-		*/
-
+		// Position du clic est détectée par le Rectangle (#jardin-terre)
+		// L'image est ajoutée sur le AnchorPane (#jardin-cloture)
+		Rectangle jardin = (Rectangle)lookup("#jardin-terre");
+		jardin.setOnMouseClicked(new EventHandler<MouseEvent>() {
+			@Override
+			public void handle(MouseEvent e) {
+				
+				System.out.println("Clic pour planter un semis");
+				
+				
+				
+				
+			}});
 	}
 }
