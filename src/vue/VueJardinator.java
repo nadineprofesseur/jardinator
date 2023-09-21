@@ -6,6 +6,7 @@ import controleur.ControleurJardinator;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.Button;
+import modele.Legume;
 
 public class VueJardinator extends Vue {
 
@@ -31,7 +32,7 @@ public class VueJardinator extends Vue {
 			public void handle(ActionEvent e) {
 				
 				System.out.println("Clic choisir carotte !");
-				controleur.notifierChoixLegume();
+				controleur.notifierChoixSemis(Legume.LEGUME.CAROTTE);
 				
 			}});
 		

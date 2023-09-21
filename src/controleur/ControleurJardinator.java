@@ -4,10 +4,11 @@ import com.sun.media.jfxmedia.logging.Logger;
 
 import architecture.Controleur;
 import modele.Legume;
+import modele.Legume.LEGUME;
 
 public class ControleurJardinator extends Controleur{
 
-	private Legume legumeChoisi = new Legume();
+	private Legume.LEGUME legumeChoisi;
 	
 	public ControleurJardinator()
 	{
@@ -19,8 +20,9 @@ public class ControleurJardinator extends Controleur{
 		
 	}
 
-	public void notifierChoixLegume() {
+	public void notifierChoixSemis(LEGUME legume) {
 		
+		this.legumeChoisi = legume;
 	}
 	
 	
