@@ -55,17 +55,22 @@ public class VueJardinator extends Vue {
 				double y = clic.getY();
 				System.out.println("Clic a ("+x+","+y+")");
 				
-				
-				ImageView carottePlantee = new ImageView();
-				carottePlantee.setImage(new Image("vue/decoration/semis/carotte.png"));
-				carottePlantee.setPreserveRatio(true);
-				carottePlantee.setFitHeight(100);
-				carottePlantee.setX(x - 15);
-				carottePlantee.setY(y - 50); 
-				
-				AnchorPane cloture = (AnchorPane)lookup("#jardin-cloture");
-				cloture.getChildren().add(carottePlantee);				
+				planterSemis(x,y);
 
 			}});
+	}
+	
+	public void planterSemis(double x, double y)
+	{
+		ImageView carottePlantee = new ImageView();
+		carottePlantee.setImage(new Image("vue/decoration/semis/carotte.png"));
+		carottePlantee.setPreserveRatio(true);
+		carottePlantee.setFitHeight(100);
+		carottePlantee.setX(x - 15);
+		carottePlantee.setY(y - 50); 
+		
+		AnchorPane cloture = (AnchorPane)lookup("#jardin-cloture");
+		cloture.getChildren().add(carottePlantee);				
+
 	}
 }
