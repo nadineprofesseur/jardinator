@@ -31,7 +31,7 @@ public class VueJardinator extends Vue {
 			public void handle(ActionEvent e) {
 				
 				System.out.println("Clic choisir carotte !");
-				
+				controleur.notifierChoixLegume();
 				
 			}});
 		
