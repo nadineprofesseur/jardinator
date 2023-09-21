@@ -48,21 +48,24 @@ public class VueJardinator extends Vue {
 		Rectangle jardin = (Rectangle)lookup("#jardin-terre");
 		jardin.setOnMouseClicked(new EventHandler<MouseEvent>() {
 			@Override
-			public void handle(MouseEvent e) {
+			public void handle(MouseEvent clic) {
 				
 				System.out.println("Clic pour planter un semis");
+				double x = clic.getX();
+				double y = clic.getY();
+				System.out.println("Clic a ("+x+","+y+")");
 				
-				// Ajouter une carotte dans le jardin
+				
 				ImageView carottePlantee = new ImageView();
 				carottePlantee.setImage(new Image("vue/decoration/semis/carotte.png"));
+				carottePlantee.setPreserveRatio(true);
+				carottePlantee.setFitHeight(100);
+				carottePlantee.setX(x - 15);
+				carottePlantee.setY(y - 50); 
+				
 				AnchorPane cloture = (AnchorPane)lookup("#jardin-cloture");
-				cloture.getChildren().add(carottePlantee);
-				
-				
-				
-				
-				
-				
+				cloture.getChildren().add(carottePlantee);				
+
 			}});
 	}
 }
