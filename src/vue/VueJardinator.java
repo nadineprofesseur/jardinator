@@ -6,7 +6,10 @@ import controleur.ControleurJardinator;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.Button;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Rectangle;
 import modele.Legume;
 
@@ -48,6 +51,14 @@ public class VueJardinator extends Vue {
 			public void handle(MouseEvent e) {
 				
 				System.out.println("Clic pour planter un semis");
+				
+				// Ajouter une carotte dans le jardin
+				ImageView carottePlantee = new ImageView();
+				carottePlantee.setImage(new Image("vue/decoration/semis/carotte.png"));
+				AnchorPane cloture = (AnchorPane)lookup("#jardin-cloture");
+				cloture.getChildren().add(carottePlantee);
+				
+				
 				
 				
 				
