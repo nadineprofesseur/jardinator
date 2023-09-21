@@ -96,7 +96,7 @@
                         <RowConstraints maxHeight="110.0" minHeight="10.0" prefHeight="110.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <Button id="choisir-carotte" fx:id="choisirCarotte" mnemonicParsing="false" prefHeight="119.0" prefWidth="106.0" textOverrun="CLIP">
+                        <Button id="action-choisir-carotte" fx:id="actionChoisirCarotte" mnemonicParsing="false" prefHeight="119.0" prefWidth="106.0" textOverrun="CLIP">
                            <graphic>
                               <ImageView fitHeight="109.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -105,7 +105,7 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Button mnemonicParsing="false" prefHeight="119.0" prefWidth="108.0" textOverrun="CLIP" GridPane.columnIndex="1">
+                        <Button id="action-choisir-navet" fx:id="actionChoisirNavet" mnemonicParsing="false" prefHeight="119.0" prefWidth="108.0" textOverrun="CLIP" GridPane.columnIndex="1">
                            <graphic>
                               <ImageView fitHeight="101.0" fitWidth="95.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -114,7 +114,7 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Button mnemonicParsing="false" prefHeight="140.0" prefWidth="106.0" textOverrun="CLIP" GridPane.columnIndex="2">
+                        <Button id="action-choisir-chou" fx:id="actionChoisirChou" mnemonicParsing="false" prefHeight="140.0" prefWidth="106.0" textOverrun="CLIP" GridPane.columnIndex="2">
                            <graphic>
                               <ImageView fitHeight="109.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -123,7 +123,7 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Button mnemonicParsing="false" prefHeight="119.0" prefWidth="108.0" textOverrun="CLIP" GridPane.columnIndex="3">
+                        <Button id="action-choisir-oignon" fx:id="actionChoisirOignon" mnemonicParsing="false" prefHeight="119.0" prefWidth="108.0" textOverrun="CLIP" GridPane.columnIndex="3">
                            <graphic>
                               <ImageView fitHeight="83.0" fitWidth="82.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
