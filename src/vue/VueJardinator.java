@@ -55,9 +55,12 @@ public class VueJardinator extends Vue {
 				double y = clic.getY();
 				System.out.println("Clic a ("+x+","+y+")");
 				
-				planterSemis(x,y);
+				controleur.notifierClicJardin(x,y);
 
-			}});
+			}
+			
+		
+		});
 	}
 	
 	public void planterSemis(double x, double y)
@@ -71,6 +74,5 @@ public class VueJardinator extends Vue {
 		
 		AnchorPane cloture = (AnchorPane)lookup("#jardin-cloture");
 		cloture.getChildren().add(carottePlantee);				
-
 	}
 }

@@ -5,6 +5,7 @@ import com.sun.media.jfxmedia.logging.Logger;
 import architecture.Controleur;
 import modele.Legume;
 import modele.Legume.LEGUME;
+import vue.VueJardinator;
 
 public class ControleurJardinator extends Controleur{
 
@@ -23,6 +24,10 @@ public class ControleurJardinator extends Controleur{
 	public void notifierChoixSemis(LEGUME legume) {
 		
 		this.legumeChoisi = legume;
+	}
+
+	public void notifierClicJardin(double x, double y) {
+		VueJardinator.getInstance().planterSemis(x,y);		
 	}
 	
 	
