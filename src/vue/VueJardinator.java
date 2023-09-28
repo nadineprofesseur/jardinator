@@ -72,6 +72,33 @@ public class VueJardinator extends Vue {
 			
 		
 		});
+		
+		Button actionChoisirTerrainTerre = (Button)lookup("#action-choisir-terrain-terre");
+		Button actionChoisirTerrainEnclos = (Button)lookup("#action-choisir-terrain-enclos");
+		Button actionChoisirTerrainRang = (Button)lookup("#action-choisir-terrain-rang");
+		Button actionChoisirTerrainBacs = (Button)lookup("#action-choisir-terrain-bacs");
+		
+		actionChoisirTerrainTerre.setOnAction(new EventHandler<ActionEvent>() {
+			@Override
+			public void handle(ActionEvent e) {
+				System.out.println("Choisir le terrain TERRE");				
+			}});
+		actionChoisirTerrainEnclos.setOnAction(new EventHandler<ActionEvent>() {
+			@Override
+			public void handle(ActionEvent e) {
+				System.out.println("Choisir le terrain ENCLOS");				
+			}});
+		actionChoisirTerrainRang.setOnAction(new EventHandler<ActionEvent>() {
+			@Override
+			public void handle(ActionEvent e) {
+				System.out.println("Choisir le terrain RANG");				
+			}});
+		actionChoisirTerrainBacs.setOnAction(new EventHandler<ActionEvent>() {
+			@Override
+			public void handle(ActionEvent e) {
+				System.out.println("Choisir le terrain BACS");				
+			}});
+
 	}
 	
 	public void planterSemis(LEGUME legumeChoisi, double x, double y)
