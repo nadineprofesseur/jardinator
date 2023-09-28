@@ -112,16 +112,20 @@ public class VueJardinator extends Vue {
 		switch(numeroTerrain)
 		{
 		case 1:// TERRE
-			cloture.setStyle("-fx-background-image:url('vue/decoration/terrain/terrain-bacs.png');");
+			cloture.setStyle("-fx-background-image:url('vue/decoration/terrain/terrain-terre.png');");
 			break;
 		case 2: // ENCLOS
+			cloture.setStyle("-fx-background-image:url('vue/decoration/terrain/terrain-enclos.png');");
 			break;
 		case 3: // RANGS
+			cloture.setStyle("-fx-background-image:url('vue/decoration/terrain/terrain-rangs.png');");
 			break;
-		case 4: //
+		case 4: // BACS
+			cloture.setStyle("-fx-background-image:url('vue/decoration/terrain/terrain-bacs.png');");
 			break;
 		default:
-			break;
+			cloture.setStyle("-fx-background-image:url('vue/decoration/terrain/terrain.png');");
+		break;
 			
 		}
 	}
