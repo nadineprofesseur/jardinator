@@ -82,34 +82,48 @@ public class VueJardinator extends Vue {
 			@Override
 			public void handle(ActionEvent e) {
 				System.out.println("Choisir le terrain TERRE");		
-				afficherTerrain();
+				afficherTerrain(1);
 			}});
 		actionChoisirTerrainEnclos.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
 			public void handle(ActionEvent e) {
 				System.out.println("Choisir le terrain ENCLOS");				
-				afficherTerrain();
+				afficherTerrain(2);
 			}});
 		actionChoisirTerrainRang.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
 			public void handle(ActionEvent e) {
 				System.out.println("Choisir le terrain RANG");				
-				afficherTerrain();
+				afficherTerrain(3);
 			}});
 		actionChoisirTerrainBacs.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
 			public void handle(ActionEvent e) {
 				System.out.println("Choisir le terrain BACS");				
-				afficherTerrain();
+				afficherTerrain(4);
 			}});
 
 	}
 	
-	public void afficherTerrain()
+	public void afficherTerrain(int numeroTerrain)
 	{
 		AnchorPane cloture = (AnchorPane)lookup("#jardin-cloture");
 		System.out.println(cloture);
-		cloture.setStyle("-fx-background-image:url('vue/decoration/terrain/terrain-bacs.png');");
+		switch(numeroTerrain)
+		{
+		case 1:// TERRE
+			cloture.setStyle("-fx-background-image:url('vue/decoration/terrain/terrain-bacs.png');");
+			break;
+		case 2: // ENCLOS
+			break;
+		case 3: // RANGS
+			break;
+		case 4: //
+			break;
+		default:
+			break;
+			
+		}
 	}
 	
 	public void planterSemis(LEGUME legumeChoisi, double x, double y)
