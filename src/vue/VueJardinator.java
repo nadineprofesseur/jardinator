@@ -81,7 +81,10 @@ public class VueJardinator extends Vue {
 		actionChoisirTerrainTerre.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
 			public void handle(ActionEvent e) {
-				System.out.println("Choisir le terrain TERRE");				
+				System.out.println("Choisir le terrain TERRE");		
+				AnchorPane cloture = (AnchorPane)lookup("#jardin-cloture");
+				System.out.println(cloture);
+				cloture.setStyle("-fx-background-image:url('vue/decoration/terrain/terrain-bacs.png');");
 			}});
 		actionChoisirTerrainEnclos.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
