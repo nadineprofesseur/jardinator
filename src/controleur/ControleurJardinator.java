@@ -27,7 +27,7 @@ public class ControleurJardinator extends Controleur{
 	}
 
 	public void notifierClicJardin(double x, double y) {
-		VueJardinator.getInstance().planterSemis(x,y);		
+		VueJardinator.getInstance().planterSemis(this.legumeChoisi, x,y);		
 	}
 	
 	

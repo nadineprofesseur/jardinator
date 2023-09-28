@@ -12,6 +12,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Rectangle;
 import modele.Legume;
+import modele.Legume.LEGUME;
 
 public class VueJardinator extends Vue {
 
@@ -40,6 +41,16 @@ public class VueJardinator extends Vue {
 				controleur.notifierChoixSemis(Legume.LEGUME.CAROTTE);
 				
 			}});
+		Button choisirChou = (Button)lookup("#action-choisir-chou");
+		choisirChou.setOnAction(new EventHandler<ActionEvent>() {
+
+			@Override
+			public void handle(ActionEvent e) {
+				
+				System.out.println("Clic choisir chou !");
+				controleur.notifierChoixSemis(Legume.LEGUME.CHOU);
+				
+			}});
 				
 		// POC = Proof Of Concept => que on peut faire apparaitre une image sur le jardin
 		
@@ -63,16 +74,20 @@ public class VueJardinator extends Vue {
 		});
 	}
 	
-	public void planterSemis(double x, double y)
+	public void planterSemis(LEGUME legumeChoisi, double x, double y)
 	{
-		ImageView carottePlantee = new ImageView();
-		carottePlantee.setImage(new Image("vue/decoration/semis/carotte.png"));
-		carottePlantee.setPreserveRatio(true);
-		carottePlantee.setFitHeight(100);
-		carottePlantee.setX(x - 15);
-		carottePlantee.setY(y - 50); 
+		ImageView legumePlante = new ImageView();
+		if(legumeChoisi == LEGUME.CAROTTE)
+			legumePlante.setImage(new Image("vue/decoration/semis/carotte.png"));
+		if(legumeChoisi == LEGUME.CHOU)
+			legumePlante.setImage(new Image("vue/decoration/semis/chou.png"));
+			
+		legumePlante.setPreserveRatio(true);
+		legumePlante.setFitHeight(100);
+		legumePlante.setX(x - 15);
+		legumePlante.setY(y - 50); 
 		
 		AnchorPane cloture = (AnchorPane)lookup("#jardin-cloture");
-		cloture.getChildren().add(carottePlantee);				
+		cloture.getChildren().add(legumePlante);				
 	}
 }

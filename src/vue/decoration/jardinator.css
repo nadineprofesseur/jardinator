@@ -106,3 +106,16 @@ https://all-free-download.com/free-vector/download/clover-ribbon-vector_163196.h
 {
     -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #24a33b, #2a81a3);    
 }
+
+Button.action-choisir-terrain
+{
+    -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #40ff63, #40c9ff);
+    -fx-text-fill: white;
+    -fx-font-weight: bold; 
+    -fx-font-size:20px;
+    -fx-cursor: hand;
+}
+Button.action-choisir-terrain:hover
+{
+    -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #24a33b, #2a81a3);    
+}

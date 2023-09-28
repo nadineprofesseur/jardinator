@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Tooltip?>
@@ -9,6 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
@@ -74,9 +76,9 @@
             <AnchorPane id="actions" layoutX="21.0" layoutY="23.0" prefHeight="119.0" prefWidth="462.0">
                <children>
                   <Button layoutX="20.0" layoutY="10.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="201.0" text="RECOMMENCER" textOverrun="CLIP" />
-                  <Button layoutX="20.0" layoutY="66.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="201.0" text="UNDO" textOverrun="CLIP" />
-                  <Button layoutX="237.0" layoutY="10.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="201.0" text="RANDOMISER" textOverrun="CLIP" />
-                  <Button layoutX="237.0" layoutY="66.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="201.0" text="REDO" textOverrun="CLIP" />
+                  <Button id="action-undo" fx:id="actionUndo" layoutX="20.0" layoutY="66.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="201.0" text="UNDO" textOverrun="CLIP" />
+                  <Button id="action-sauvegarder" fx:id="actionSauvegarder" layoutX="237.0" layoutY="10.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="201.0" text="SAUVEGARDER" textOverrun="CLIP" />
+                  <Button id="action-redo" fx:id="actionRedo" layoutX="237.0" layoutY="66.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="201.0" text="REDO" textOverrun="CLIP" />
                </children>
             </AnchorPane>
             <Pane layoutX="6.0" layoutY="150.0" prefHeight="501.0" prefWidth="1207.0">
@@ -96,7 +98,7 @@
                         <RowConstraints maxHeight="110.0" minHeight="10.0" prefHeight="110.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <Button id="action-choisir-carotte" fx:id="actionChoisirCarotte" mnemonicParsing="false" prefHeight="119.0" prefWidth="106.0" textOverrun="CLIP">
+                        <Button id="action-choisir-carotte" fx:id="choisirCarotte" mnemonicParsing="false" prefHeight="119.0" prefWidth="106.0" textOverrun="CLIP">
                            <graphic>
                               <ImageView fitHeight="109.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -105,7 +107,7 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Button id="action-choisir-navet" fx:id="actionChoisirNavet" mnemonicParsing="false" prefHeight="119.0" prefWidth="108.0" textOverrun="CLIP" GridPane.columnIndex="1">
+                        <Button id="action-choisir-radis" fx:id="choisirRadis" mnemonicParsing="false" prefHeight="119.0" prefWidth="108.0" textOverrun="CLIP" GridPane.columnIndex="1">
                            <graphic>
                               <ImageView fitHeight="101.0" fitWidth="95.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -114,7 +116,7 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Button id="action-choisir-chou" fx:id="actionChoisirChou" mnemonicParsing="false" prefHeight="140.0" prefWidth="106.0" textOverrun="CLIP" GridPane.columnIndex="2">
+                        <Button id="action-choisir-chou" fx:id="choisirChou" mnemonicParsing="false" prefHeight="140.0" prefWidth="106.0" textOverrun="CLIP" GridPane.columnIndex="2">
                            <graphic>
                               <ImageView fitHeight="109.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -123,7 +125,7 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Button id="action-choisir-oignon" fx:id="actionChoisirOignon" mnemonicParsing="false" prefHeight="119.0" prefWidth="108.0" textOverrun="CLIP" GridPane.columnIndex="3">
+                        <Button id="action-choisir-oignon" fx:id="choisirOignon" mnemonicParsing="false" prefHeight="119.0" prefWidth="108.0" textOverrun="CLIP" GridPane.columnIndex="3">
                            <graphic>
                               <ImageView fitHeight="83.0" fitWidth="82.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -132,7 +134,7 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Button mnemonicParsing="false" prefHeight="119.0" prefWidth="108.0" textOverrun="CLIP" GridPane.rowIndex="1">
+                        <Button id="choisir-choufleur" fx:id="choisirChouFleur" mnemonicParsing="false" prefHeight="119.0" prefWidth="108.0" textOverrun="CLIP" GridPane.rowIndex="1">
                            <graphic>
                               <ImageView fitHeight="83.0" fitWidth="82.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -141,7 +143,7 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Button mnemonicParsing="false" prefHeight="119.0" prefWidth="108.0" textOverrun="CLIP" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                        <Button id="choisir-panais" fx:id="choisirPanais" mnemonicParsing="false" prefHeight="119.0" prefWidth="108.0" textOverrun="CLIP" GridPane.columnIndex="1" GridPane.rowIndex="1">
                            <graphic>
                               <ImageView fitHeight="83.0" fitWidth="82.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -150,7 +152,7 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Button mnemonicParsing="false" prefHeight="119.0" prefWidth="108.0" textOverrun="CLIP" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                        <Button id="choisir-champignon" fx:id="choisirChampignon" mnemonicParsing="false" prefHeight="119.0" prefWidth="108.0" textOverrun="CLIP" GridPane.columnIndex="2" GridPane.rowIndex="1">
                            <graphic>
                               <ImageView fitHeight="83.0" fitWidth="82.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -159,7 +161,7 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Button mnemonicParsing="false" prefHeight="119.0" prefWidth="108.0" textOverrun="CLIP" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                        <Button id="choisir-laitue" fx:id="choisirLaitue" mnemonicParsing="false" prefHeight="119.0" prefWidth="108.0" textOverrun="CLIP" GridPane.columnIndex="3" GridPane.rowIndex="1">
                            <graphic>
                               <ImageView fitHeight="83.0" fitWidth="82.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -177,14 +179,30 @@
                   </AnchorPane>
                </children>
             </Pane>
-            <ImageView fitHeight="141.0" fitWidth="574.0" layoutX="568.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="92.0" fitWidth="342.0" layoutX="658.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@decoration/ruban-vert.png" />
                </image>
             </ImageView>
+            <HBox id="choix-terrain" fx:id="choixTerrain" layoutX="497.0" layoutY="23.0" prefHeight="43.0" prefWidth="702.0" spacing="10.0">
+               <children>
+                  <Button id="action-choisir-terrain-terre" fx:id="choixTerrainTerre" mnemonicParsing="false" prefHeight="43.0" prefWidth="170.0" styleClass="action-choisir-terrain" text="Terre" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Button>
+                  <Button id="action-choisir-terrain-enclos" fx:id="choixTerrainEnclos" mnemonicParsing="false" prefHeight="43.0" prefWidth="174.0" styleClass="action-choisir-terrain" text="Enclos" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Button>
+                  <Button id="action-choisir-terrain-rang" fx:id="choixTerrainRang" mnemonicParsing="false" prefHeight="43.0" prefWidth="165.0" styleClass="action-choisir-terrain" text="Rangs" textFill="WHITE" />
+                  <Button id="action-choisir-terrain-bacs" fx:id="choixTerrainBacs" mnemonicParsing="false" prefHeight="43.0" prefWidth="166.0" styleClass="action-choisir-terrain" text="Bacs" textFill="WHITE" />
+               </children>
+            </HBox>
          </children>
       </AnchorPane>
-      <Pane id="entete" layoutX="-6.0" layoutY="-7.0" prefHeight="98.0" prefWidth="1301.0" AnchorPane.leftAnchor="-6.0" AnchorPane.rightAnchor="-1.0">
+      <Pane id="entete" layoutX="-57.0" layoutY="-7.0" prefHeight="92.0" prefWidth="1352.0" AnchorPane.leftAnchor="-57.0" AnchorPane.rightAnchor="-1.0">
          <children>
             <Label layoutX="429.0" layoutY="12.0" prefHeight="72.0" prefWidth="431.0" text="JARDINATOR" textFill="#fff7f7">
                <font>
