@@ -82,25 +82,25 @@ public class VueJardinator extends Vue {
 			@Override
 			public void handle(ActionEvent e) {
 				System.out.println("Choisir le terrain TERRE");		
-				afficherTerrain(1);
+				controleur.notifierChoixTerrain(1);
 			}});
 		actionChoisirTerrainEnclos.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
 			public void handle(ActionEvent e) {
-				System.out.println("Choisir le terrain ENCLOS");				
-				afficherTerrain(2);
+				System.out.println("Choisir le terrain ENCLOS");	
+				controleur.notifierChoixTerrain(2);
 			}});
 		actionChoisirTerrainRang.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
 			public void handle(ActionEvent e) {
 				System.out.println("Choisir le terrain RANG");				
-				afficherTerrain(3);
+				controleur.notifierChoixTerrain(3);
 			}});
 		actionChoisirTerrainBacs.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
 			public void handle(ActionEvent e) {
 				System.out.println("Choisir le terrain BACS");				
-				afficherTerrain(4);
+				controleur.notifierChoixTerrain(4);
 			}});
 
 	}
