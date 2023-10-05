@@ -161,7 +161,7 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Button id="choisir-laitue" fx:id="choisirLaitue" mnemonicParsing="false" prefHeight="119.0" prefWidth="108.0" textOverrun="CLIP" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                        <Button id="action-choisir-laitue" fx:id="choisirLaitue" mnemonicParsing="false" prefHeight="119.0" prefWidth="108.0" textOverrun="CLIP" GridPane.columnIndex="3" GridPane.rowIndex="1">
                            <graphic>
                               <ImageView fitHeight="83.0" fitWidth="82.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
