@@ -74,6 +74,8 @@ public class VueJardinator extends Vue {
 				controleur.notifierChoixSemis(Legume.LEGUME.OIGNON);
 				
 			}});
+		
+		
 		// POC = Proof Of Concept => que on peut faire apparaitre une image sur le jardin
 		
 		// Position du clic est détectée par le Rectangle (#jardin-terre)
@@ -157,8 +159,12 @@ public class VueJardinator extends Vue {
 		ImageView legumePlante = new ImageView();
 		if(legumeChoisi == LEGUME.CAROTTE)
 			legumePlante.setImage(new Image("vue/decoration/semis/carotte.png"));
+		if(legumeChoisi == LEGUME.RADIS)
+			legumePlante.setImage(new Image("vue/decoration/semis/radis.png"));
 		if(legumeChoisi == LEGUME.CHOU)
 			legumePlante.setImage(new Image("vue/decoration/semis/chou.png"));
+		if(legumeChoisi == LEGUME.OIGNON)
+			legumePlante.setImage(new Image("vue/decoration/semis/oignon.png"));
 			
 		legumePlante.setPreserveRatio(true);
 		legumePlante.setFitHeight(100);
