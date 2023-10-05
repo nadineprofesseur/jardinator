@@ -75,6 +75,16 @@ public class VueJardinator extends Vue {
 				
 			}});
 		
+		Button choisirChouFleur = (Button)lookup("#action-choisir-choufleur");
+		choisirChouFleur.setOnAction(new EventHandler<ActionEvent>() {
+
+			@Override
+			public void handle(ActionEvent e) {
+				
+				System.out.println("Clic choisir oignon !");
+				controleur.notifierChoixSemis(Legume.LEGUME.CHOU_FLEUR);
+				
+			}});
 		
 		// POC = Proof Of Concept => que on peut faire apparaitre une image sur le jardin
 		
@@ -165,6 +175,8 @@ public class VueJardinator extends Vue {
 			legumePlante.setImage(new Image("vue/decoration/semis/chou.png"));
 		if(legumeChoisi == LEGUME.OIGNON)
 			legumePlante.setImage(new Image("vue/decoration/semis/oignon.png"));
+		if(legumeChoisi == LEGUME.CHOU_FLEUR)
+			legumePlante.setImage(new Image("vue/decoration/semis/chou-fleur.png"));
 			
 		legumePlante.setPreserveRatio(true);
 		legumePlante.setFitHeight(100);

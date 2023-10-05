@@ -2,7 +2,7 @@ package modele;
 
 public class Legume {
 	
-	public enum LEGUME {CAROTTE, RADIS, CHOU, OIGNON};
+	public enum LEGUME {CAROTTE, RADIS, CHOU, OIGNON, CHOU_FLEUR};
 	protected LEGUME legume;
 	
 	public Legume()

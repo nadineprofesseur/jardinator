@@ -134,7 +134,7 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Button id="choisir-choufleur" fx:id="choisirChouFleur" mnemonicParsing="false" prefHeight="119.0" prefWidth="108.0" textOverrun="CLIP" GridPane.rowIndex="1">
+                        <Button id="action-choisir-choufleur" fx:id="choisirChouFleur" mnemonicParsing="false" prefHeight="119.0" prefWidth="108.0" textOverrun="CLIP" GridPane.rowIndex="1">
                            <graphic>
                               <ImageView fitHeight="83.0" fitWidth="82.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -143,7 +143,7 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Button id="choisir-panais" fx:id="choisirPanais" mnemonicParsing="false" prefHeight="119.0" prefWidth="108.0" textOverrun="CLIP" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                        <Button id="action-choisir-panais" fx:id="choisirPanais" mnemonicParsing="false" prefHeight="119.0" prefWidth="108.0" textOverrun="CLIP" GridPane.columnIndex="1" GridPane.rowIndex="1">
                            <graphic>
                               <ImageView fitHeight="83.0" fitWidth="82.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -152,7 +152,7 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Button id="choisir-champignon" fx:id="choisirChampignon" mnemonicParsing="false" prefHeight="119.0" prefWidth="108.0" textOverrun="CLIP" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                        <Button id="action-choisir-champignon" fx:id="choisirChampignon" mnemonicParsing="false" prefHeight="119.0" prefWidth="108.0" textOverrun="CLIP" GridPane.columnIndex="2" GridPane.rowIndex="1">
                            <graphic>
                               <ImageView fitHeight="83.0" fitWidth="82.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
