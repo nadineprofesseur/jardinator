@@ -41,17 +41,39 @@ public class VueJardinator extends Vue {
 				controleur.notifierChoixSemis(Legume.LEGUME.CAROTTE);
 				
 			}});
+		
+		Button choisirRadis = (Button)lookup("#action-choisir-radis");
+		choisirRadis.setOnAction(new EventHandler<ActionEvent>() {
+
+			@Override
+			public void handle(ActionEvent e) {
+				
+				System.out.println("Clic choisir radis !");
+				controleur.notifierChoixSemis(Legume.LEGUME.RADIS);
+				
+			}});
+				
 		Button choisirChou = (Button)lookup("#action-choisir-chou");
 		choisirChou.setOnAction(new EventHandler<ActionEvent>() {
 
 			@Override
 			public void handle(ActionEvent e) {
 				
-				System.out.println("Clic choisir chou !");
+				System.out.println("Clic choisir radis !");
 				controleur.notifierChoixSemis(Legume.LEGUME.CHOU);
 				
 			}});
+		
+		Button choisirOignon = (Button)lookup("#action-choisir-oignon");
+		choisirOignon.setOnAction(new EventHandler<ActionEvent>() {
+
+			@Override
+			public void handle(ActionEvent e) {
 				
+				System.out.println("Clic choisir oignon !");
+				controleur.notifierChoixSemis(Legume.LEGUME.OIGNON);
+				
+			}});
 		// POC = Proof Of Concept => que on peut faire apparaitre une image sur le jardin
 		
 		// Position du clic est détectée par le Rectangle (#jardin-terre)
