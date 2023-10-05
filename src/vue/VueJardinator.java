@@ -81,10 +81,34 @@ public class VueJardinator extends Vue {
 			@Override
 			public void handle(ActionEvent e) {
 				
-				System.out.println("Clic choisir oignon !");
+				System.out.println("Clic choisir chou-fleur !");
 				controleur.notifierChoixSemis(Legume.LEGUME.CHOU_FLEUR);
 				
 			}});
+		
+		Button choisirPanais = (Button)lookup("#action-choisir-panais");
+		choisirPanais.setOnAction(new EventHandler<ActionEvent>() {
+
+			@Override
+			public void handle(ActionEvent e) {
+				
+				System.out.println("Clic choisir panais !");
+				controleur.notifierChoixSemis(Legume.LEGUME.PANAIS);
+				
+			}});
+		
+		Button choisirChampignon = (Button)lookup("#action-choisir-champignon");
+		choisirChampignon.setOnAction(new EventHandler<ActionEvent>() {
+
+			@Override
+			public void handle(ActionEvent e) {
+				
+				System.out.println("Clic choisir champignons !");
+				controleur.notifierChoixSemis(Legume.LEGUME.CHAMPIGNONS);
+				
+			}});
+		
+
 		
 		// POC = Proof Of Concept => que on peut faire apparaitre une image sur le jardin
 		
@@ -177,6 +201,10 @@ public class VueJardinator extends Vue {
 			legumePlante.setImage(new Image("vue/decoration/semis/oignon.png"));
 		if(legumeChoisi == LEGUME.CHOU_FLEUR)
 			legumePlante.setImage(new Image("vue/decoration/semis/chou-fleur.png"));
+		if(legumeChoisi == LEGUME.CHAMPIGNONS)
+			legumePlante.setImage(new Image("vue/decoration/semis/champignon.png"));
+		if(legumeChoisi == LEGUME.PANAIS)
+			legumePlante.setImage(new Image("vue/decoration/semis/panais.png"));
 			
 		legumePlante.setPreserveRatio(true);
 		legumePlante.setFitHeight(100);
