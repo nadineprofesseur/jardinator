@@ -225,6 +225,6 @@ public class VueJardinator extends Vue {
 		legumePlante.setY(y - 50); 
 		
 		AnchorPane cloture = (AnchorPane)lookup("#jardin-cloture");
-		cloture.getChildren().add(legumePlante);				
+		cloture.getChildren().add(legumePlante);
 	}
 }
