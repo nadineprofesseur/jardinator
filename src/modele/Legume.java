@@ -1,6 +1,8 @@
 package modele;
 
-public class Legume {
+import donnee.Exportable;
+
+public class Legume implements Exportable {
 	
 	public enum LEGUME {CAROTTE, RADIS, CHOU, OIGNON, CHOU_FLEUR, PANAIS, CHAMPIGNONS, LAITUE};
 	protected LEGUME legume;
@@ -41,6 +43,17 @@ public class Legume {
 	}
 	public void setLegume(LEGUME legume) {
 		this.legume = legume;
+	}
+	@Override
+	public String exporterXML() {
+		String xml = "";
+		xml += "<type>" + this.legume + "</type>";
+		xml += "<coordonnees>" + this.x + "," + this.y + "</coordonnees>";
+		return "<legume>" + xml + "</legume>";
+	}
+	@Override
+	public String exporterJSON() {
+		return "NON-IMPLEMENTE";
 	}
 
 	
