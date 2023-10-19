@@ -6,6 +6,8 @@ import java.util.List;
 import com.sun.media.jfxmedia.logging.Logger;
 
 import architecture.Controleur;
+import donnee.Exportable;
+import donnee.Exporteur;
 import modele.Legume;
 import modele.Legume.LEGUME;
 import vue.VueJardinator;
@@ -13,12 +15,12 @@ import vue.VueJardinator;
 public class ControleurJardinator extends Controleur{
 
 	private Legume.LEGUME legumeChoisi;
-	private List<Legume> legumesDuJardin = null; // DECLARATION du nom du pointeur
+	private List<Exportable> legumesDuJardin = null; // DECLARATION du nom du pointeur
 	
 	public ControleurJardinator()
 	{
 		Logger.logMsg(Logger.INFO, "new ControleurJardinator()");
-		this.legumesDuJardin = new ArrayList<Legume>(); // INSTANTIATION
+		this.legumesDuJardin = new ArrayList<Exportable>(); // INSTANTIATION
 	}
 	
 	public void initialiser()
@@ -41,8 +43,8 @@ public class ControleurJardinator extends Controleur{
 	public void notifierChoixTerrain(int numeroTerrain) {
 		System.out.println("ControleurJardinator.notifierChoixTerrain()");
 		VueJardinator.getInstance().afficherTerrain(numeroTerrain);
-		
-		
+		Exporteur exporteur = new Exporteur();
+		exporteur.sauvegarder(legumesDuJardin);		
 	}
 	
 	
