@@ -44,9 +44,10 @@ public class ControleurJardinator extends Controleur{
 		this.jardin.ajouterLegume(legume); // encapsulation respectee
 	}
 
-	public void notifierChoixTerrain(int numeroTerrain) {
+	public void notifierChoixTerrain(Jardin.TERRAIN terrain) {
 		System.out.println("ControleurJardinator.notifierChoixTerrain()");
-		VueJardinator.getInstance().afficherTerrain(numeroTerrain);
+		VueJardinator.getInstance().afficherTerrain(terrain);
+		this.jardin.setTerrain(terrain);
 	}
 
 	public void notifierSauvegarder() {

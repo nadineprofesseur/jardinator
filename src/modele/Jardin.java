@@ -7,10 +7,20 @@ import donnee.Exportable;
 
 public class Jardin implements Exportable {
 
+	public enum TERRAIN {BACS, ENCLOS, TERRE, RANGS, AUCUN};
+	protected TERRAIN terrain;
+
 	protected List<Legume> legumesDuJardin;
 	
 	public Jardin() {
 		this.legumesDuJardin = new ArrayList<Legume>();
+	}
+	public TERRAIN getTerrain() {
+		return terrain;
+	}
+
+	public void setTerrain(TERRAIN terrain) {
+		this.terrain = terrain;
 	}
 	
 	public List<Legume> getLegumesDuJardin() {

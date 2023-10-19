@@ -12,8 +12,11 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Rectangle;
+import modele.Jardin;
+import modele.Jardin.TERRAIN;
 import modele.Legume;
 import modele.Legume.LEGUME;
+
 
 public class VueJardinator extends Vue {
 
@@ -152,25 +155,25 @@ public class VueJardinator extends Vue {
 			@Override
 			public void handle(ActionEvent e) {
 				System.out.println("Choisir le terrain TERRE");		
-				controleur.notifierChoixTerrain(1);
+				controleur.notifierChoixTerrain(Jardin.TERRAIN.TERRE);
 			}});
 		actionChoisirTerrainEnclos.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
 			public void handle(ActionEvent e) {
 				System.out.println("Choisir le terrain ENCLOS");	
-				controleur.notifierChoixTerrain(2);
+				controleur.notifierChoixTerrain(Jardin.TERRAIN.ENCLOS);
 			}});
 		actionChoisirTerrainRang.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
 			public void handle(ActionEvent e) {
 				System.out.println("Choisir le terrain RANG");				
-				controleur.notifierChoixTerrain(3);
+				controleur.notifierChoixTerrain(Jardin.TERRAIN.RANGS);
 			}});
 		actionChoisirTerrainBacs.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
 			public void handle(ActionEvent e) {
 				System.out.println("Choisir le terrain BACS");				
-				controleur.notifierChoixTerrain(4);
+				controleur.notifierChoixTerrain(Jardin.TERRAIN.BACS);
 			}});
 		
 		Button actionSauvegarder = (Button)lookup("#action-sauvegarder");
@@ -185,22 +188,22 @@ public class VueJardinator extends Vue {
 
 	}
 	
-	public void afficherTerrain(int numeroTerrain)
+	public void afficherTerrain(TERRAIN terrain)
 	{
 		AnchorPane cloture = (AnchorPane)lookup("#jardin-cloture");
 		System.out.println(cloture);
-		switch(numeroTerrain)
+		switch(terrain)
 		{
-		case 1:// TERRE
+		case TERRE:// TERRE
 			cloture.setStyle("-fx-background-image:url('vue/decoration/terrain/terrain-terre.png');");
 			break;
-		case 2: // ENCLOS
+		case ENCLOS: // ENCLOS
 			cloture.setStyle("-fx-background-image:url('vue/decoration/terrain/terrain-enclos.png');");
 			break;
-		case 3: // RANGS
+		case RANGS: // RANGS
 			cloture.setStyle("-fx-background-image:url('vue/decoration/terrain/terrain-rangs.png');");
 			break;
-		case 4: // BACS
+		case BACS: // BACS
 			cloture.setStyle("-fx-background-image:url('vue/decoration/terrain/terrain-bacs.png');");
 			break;
 		default:
