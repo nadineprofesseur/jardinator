@@ -8,7 +8,7 @@ import donnee.Exportable;
 public class Jardin implements Exportable {
 
 	public enum TERRAIN {BACS, ENCLOS, TERRE, RANGS, AUCUN};
-	protected TERRAIN terrain;
+	protected TERRAIN terrain = TERRAIN.AUCUN;
 
 	protected List<Legume> legumesDuJardin;
 	
@@ -41,10 +41,13 @@ public class Jardin implements Exportable {
 	public String exporterXML() {
 		
 		String xml = "";
+		xml += "<terrain>" + this.terrain + "</terrain>";
+		xml += "<legumes>";
 		for(Legume legume:this.legumesDuJardin)
 		{
 			xml+=legume.exporterXML();
 		}
+		xml += "</legumes>";
 		return "<jardin>" + xml + "</jardin>";
 	}
 
