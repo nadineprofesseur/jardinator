@@ -43,6 +43,10 @@ public class ControleurJardinator extends Controleur{
 	public void notifierChoixTerrain(int numeroTerrain) {
 		System.out.println("ControleurJardinator.notifierChoixTerrain()");
 		VueJardinator.getInstance().afficherTerrain(numeroTerrain);
+	}
+
+	public void notifierSauvegarder() {
+		System.out.println("ControleurJardinator.notifierSauvegarder()");		
 		Exporteur exporteur = new Exporteur();
 		exporteur.sauvegarder(legumesDuJardin);		
 	}

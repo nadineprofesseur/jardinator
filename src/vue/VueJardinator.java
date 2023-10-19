@@ -4,6 +4,7 @@ import com.sun.media.jfxmedia.logging.Logger;
 import architecture.Vue;
 import controleur.ControleurJardinator;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
@@ -170,6 +171,16 @@ public class VueJardinator extends Vue {
 			public void handle(ActionEvent e) {
 				System.out.println("Choisir le terrain BACS");				
 				controleur.notifierChoixTerrain(4);
+			}});
+		
+		Button actionSauvegarder = (Button)lookup("#action-sauvegarder");
+		actionSauvegarder.setOnAction(new EventHandler() {
+
+			@Override
+			public void handle(Event e) {
+				System.out.println("Action de sauvegarder");				
+				controleur.notifierSauvegarder();
+				
 			}});
 
 	}
