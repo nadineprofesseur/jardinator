@@ -32,13 +32,17 @@ public class ControleurJardinator extends Controleur{
 	}
 
 	public void notifierClicJardin(double x, double y) {
+		System.out.println("ControleurJardinator.notifierClicJardin()");
 		VueJardinator.getInstance().planterSemis(this.legumeChoisi, x,y);
 		Legume legume = new Legume(this.legumeChoisi, x, y);
 		this.legumesDuJardin.add(legume);
 	}
 
 	public void notifierChoixTerrain(int numeroTerrain) {
+		System.out.println("ControleurJardinator.notifierChoixTerrain()");
 		VueJardinator.getInstance().afficherTerrain(numeroTerrain);
+		
+		
 	}
 	
 	
