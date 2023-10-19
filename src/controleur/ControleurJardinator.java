@@ -8,6 +8,7 @@ import com.sun.media.jfxmedia.logging.Logger;
 import architecture.Controleur;
 import donnee.Exportable;
 import donnee.Exporteur;
+import modele.Jardin;
 import modele.Legume;
 import modele.Legume.LEGUME;
 import vue.VueJardinator;
@@ -15,12 +16,13 @@ import vue.VueJardinator;
 public class ControleurJardinator extends Controleur{
 
 	private Legume.LEGUME legumeChoisi;
-	private List<Exportable> legumesDuJardin = null; // DECLARATION du nom du pointeur
+	//private List<Exportable> legumesDuJardin = null; // DECLARATION du nom du pointeur
+	private Jardin jardin = new Jardin();
 	
 	public ControleurJardinator()
 	{
 		Logger.logMsg(Logger.INFO, "new ControleurJardinator()");
-		this.legumesDuJardin = new ArrayList<Exportable>(); // INSTANTIATION
+		//this.legumesDuJardin = new ArrayList<Exportable>(); // INSTANTIATION
 	}
 	
 	public void initialiser()
@@ -37,7 +39,9 @@ public class ControleurJardinator extends Controleur{
 		System.out.println("ControleurJardinator.notifierClicJardin()");
 		VueJardinator.getInstance().planterSemis(this.legumeChoisi, x,y);
 		Legume legume = new Legume(this.legumeChoisi, x, y);
-		this.legumesDuJardin.add(legume);
+		//this.legumesDuJardin.add(legume);
+		//this.jardin.getLegumesDuJardin().add(legume); // bris d'encapsulation
+		this.jardin.ajouterLegume(legume); // encapsulation respectee
 	}
 
 	public void notifierChoixTerrain(int numeroTerrain) {
@@ -48,7 +52,8 @@ public class ControleurJardinator extends Controleur{
 	public void notifierSauvegarder() {
 		System.out.println("ControleurJardinator.notifierSauvegarder()");		
 		Exporteur exporteur = new Exporteur();
-		exporteur.sauvegarder(legumesDuJardin);		
+		//exporteur.sauvegarder(legumesDuJardin);
+		exporteur.sauvegarder(jardin);
 	}
 	
 	

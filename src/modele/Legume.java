@@ -47,7 +47,7 @@ public class Legume implements Exportable {
 	@Override
 	public String exporterXML() {
 		String xml = "";
-		xml += "<type>" + this.legume + "</type>";
+		xml += "<sorte>" + this.legume + "</sorte>";
 		xml += "<coordonnees>" + this.x + "," + this.y + "</coordonnees>";
 		return "<legume>" + xml + "</legume>";
 	}
